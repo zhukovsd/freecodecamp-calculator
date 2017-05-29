@@ -3,6 +3,6 @@
 # ./node_modules/.bin/browserify build/app.js --debug -o build/app.js
 
 mkdir -p ./build/
-cp ./app/*.html ./build/
+cp ./app/*.html ./app/*.css ./build/
 
 ./node_modules/.bin/browserify app/app.js -t [babelify app] --extension=.jsx --debug -o build/app.js
