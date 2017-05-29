@@ -1,0 +1,25 @@
+.app {
+    width: 1000px;
+    margin: auto;
+}
+
+.calc {
+    display: flex;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input-buttons {
+    width: 280px;
+}
+
+#calc-right-column {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.result-paper {
+    margin-top: 5px;
+    height: 1000px;
+}
