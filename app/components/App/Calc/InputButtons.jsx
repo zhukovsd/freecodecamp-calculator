@@ -15,13 +15,14 @@ export default class InputButtons extends React.Component {
             '1', '2', '3', '+',
             '4', '5', '6', '-',
             '7', '8', '9', '*',
-            'r', '0', ',', '/',
+            {label: 'x²', text: '^2'}, '0', ',', '/',
             '(', ')', {label: 'Answer', double: true, primary: true}
         ];
 
         const buttonStyle = {minWidth: '60px', width: '60px', height: '60px', margin: '5px'};
         const labelStyle = {fontSize: '20px', lineHeight: buttonStyle.height};
 
+        let num = 0;
         const controls = buttons.map((button) => {
             const style = Object.assign({}, buttonStyle);
             if (button.double) style.width = '130px';
@@ -29,7 +30,7 @@ export default class InputButtons extends React.Component {
             const primary = button.primary === true;
 
             const label = (typeof(button) === 'string') ? button : button.label;
-            const text = label;
+            const text = (button.text === undefined) ? label : button.text;
 
             const onClick = !primary ? (e) => this.props.onInput(e, text) : this.props.onCalcRequest;
 
@@ -39,6 +40,7 @@ export default class InputButtons extends React.Component {
                 labelStyle={labelStyle}
                 primary={primary}
                 onClick={onClick}
+                key={(++num).toString()}
             />
         });
 

@@ -3,21 +3,10 @@
  */
 
 import React from 'react';
-import TextField from 'material-ui/TextField'
+import TextField from 'material-ui/TextField';
+import CircularProgress from 'material-ui/CircularProgress';
 
 export default class InputField extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.state = {value: ''};
-
-        // this.handleChange = this.handleChange.bind(this);
-    }
-
-    // handleChange(event) {
-    //     // alert(event.target.value);
-    //     this.setState({value: event.target.value});
-    // }
-
     render() {
         return (
             <div className="input-field">
@@ -27,6 +16,15 @@ export default class InputField extends React.Component {
                     hintText="Enter expression"
                     fullWidth={true}
                     onChange={this.props.onChange}
+                    onKeyPress={this.props.onKeyPress}
+                />
+
+                <CircularProgress
+                    size={25}
+                    style={{
+                        position: 'absolute', right: '0', top: '3px',
+                        display: this.props.loading ? 'block' : 'none'
+                    }}
                 />
             </div>
         );

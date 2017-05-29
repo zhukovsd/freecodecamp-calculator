@@ -9,7 +9,11 @@ export default class ResultPaper extends React.Component {
     render() {
         return (
             <div className="result-paper">
-                <Paper id="test" style={{height: '100%',}} zDepth={1} />
+                <Paper style={{height: '100%', padding: '10px', overflow: 'auto'}} zDepth={1}>
+                    <img
+                        id="result-image"
+                    />
+                </Paper>
             </div>
         );
     }

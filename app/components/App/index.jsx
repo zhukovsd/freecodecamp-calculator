@@ -8,19 +8,6 @@ import AppBar from 'material-ui/AppBar';
 import Calc from "./Calc";
 
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {clickCount: 0};
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        this.setState(prevState => {
-            ++prevState.clickCount
-        });
-    }
-
     render() {
         return (
             <MuiThemeProvider>

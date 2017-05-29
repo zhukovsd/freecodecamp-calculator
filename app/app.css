@@ -12,14 +12,21 @@
 
 .input-buttons {
     width: 280px;
+    min-width: 280px;
 }
 
 #calc-right-column {
-    flex: 1;
+    /*flex: 1;*/
+    /*flex-grow: 0;*/
+    width: 685px;
     margin-left: 15px;
 }
 
 .result-paper {
     margin-top: 5px;
-    height: 1000px;
+    height: 292px;
+}
+
+.input-field {
+    position: relative;
 }
